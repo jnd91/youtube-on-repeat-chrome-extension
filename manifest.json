@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube On Repeat",
+  "description": "Redirects you to the awesome youtube on repeat service [me@nishantarora.in]",
+  "version": "0.1",
+  "permissions": [
+    "*://www.youtube.com/watch*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["jquery.js", "repeat.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
