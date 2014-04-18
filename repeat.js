@@ -43,10 +43,15 @@ youtubeOnRepeatIcon =
 /**
  * Adding the button with link to the video title
  */
-$( document ).ready(function() {
-  $('h1#watch-headline-title').before(
-      '<a href="http://www.youtubeonrepeat.com/watch?v=' + $.urlParam('v') +
-      '"><img style="float:left; padding-right:10px;" width="43" height="28" '+
-      'title="Repeat This Video" alt="Repeat This Video" src="' +
-      youtubeOnRepeatIcon + '" /></a>');
-});
+$( document ).ready(_load_icon).bind("DOMSubtreeModified",_load_icon);
+
+function _load_icon() {
+  if($('#youtube-repeat-icon').length == 0) {
+    $('h1#watch-headline-title').before(
+        '<a href="http://www.youtubeonrepeat.com/watch?v=' + $.urlParam('v') +
+        '"><img id="youtube-repeat-icon" style="float:left; ' +
+        'padding-right:10px;" width="43" height="28" '+
+        'title="Repeat This Video" alt="Repeat This Video" src="' +
+        youtubeOnRepeatIcon + '" /></a>');
+  }
+};
