@@ -2,13 +2,13 @@
   "manifest_version": 2,
   "name": "Youtube On Repeat",
   "description": "Redirects you to the awesome youtube on repeat service [me@nishantarora.in]",
-  "version": "0.2",
+  "version": "0.3",
   "permissions": [
-    "*://www.youtube.com/watch*"
+    "*://www.youtube.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/watch*"],
+      "matches": ["*://www.youtube.com/*"],
       "js": ["jquery.js", "repeat.js"]
     }
   ],
