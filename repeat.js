@@ -1,6 +1,8 @@
 /**
  * Sending users to youtube on repeat service on demand.
+ * @author me@nishantarora.in (Nishant Arora)
  */
+
 
 /**
  * Thanks to http://www.jquery4u.com/snippets/url-parameters-jquery/
@@ -11,6 +13,7 @@ $.urlParam = function(name){
         '=([^&#$]*)').exec(window.location.href);
     return results[1] || 0;
 }
+
 
 /**
  * Icon data uri
@@ -40,11 +43,16 @@ youtubeOnRepeatIcon =
   'VuGgolDCCxDLQcso3NRc29P03/3zYZu/JHbY/lzifdA3QZIeyqKQfwG5J8SZyYP9NQAAAABJRU' +
   '5ErkJggg==';
 
+
 /**
  * Adding the button with link to the video title
  */
 $(document).ready(_load_icon).bind("DOMSubtreeModified",_load_icon);
 
+
+/**
+ * Loading icon
+ */
 function _load_icon() {
   if($('#youtube-repeat-icon').length == 0 &&
      window.location.href.indexOf('watch') != -1) {

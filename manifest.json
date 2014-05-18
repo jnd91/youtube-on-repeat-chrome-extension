@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Youtube On Repeat",
-  "description": "Redirects you to the awesome youtube on repeat service [me@nishantarora.in]",
-  "version": "0.3",
+  "name": "Repeat Tube",
+  "description": "Redirects you to the awesome youtube™ on repeat service [me@nishantarora.in]",
+  "version": "0.5",
   "permissions": [
     "*://www.youtube.com/*"
   ],
@@ -10,6 +10,10 @@
     {
       "matches": ["*://www.youtube.com/*"],
       "js": ["jquery.js", "repeat.js"]
+    },
+    {
+      "matches": ["*://www.youtubeonrepeat.com/*"],
+      "js": ["installed.js"]
     }
   ],
   "icons": {
