@@ -57,7 +57,7 @@ function _load_icon() {
   if($('#youtube-repeat-icon').length == 0 &&
      window.location.href.indexOf('watch') != -1) {
     $('h1#watch-headline-title').before(
-        '<a href="http://www.youtubeonrepeat.com/watch?v=' + $.urlParam('v') +
+        '<a href="http://youtubeonrepeat.com/watch?v=' + $.urlParam('v') +
         '"><img id="youtube-repeat-icon" style="float:left; ' +
         'padding-right:10px;" width="43" height="28" '+
         'title="Repeat This Video" alt="Repeat This Video" src="' +

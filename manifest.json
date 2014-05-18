@@ -1,19 +1,31 @@
 {
   "manifest_version": 2,
-  "name": "Repeat Tube",
-  "description": "Redirects you to the awesome youtube™ on repeat service [me@nishantarora.in]",
-  "version": "0.5",
+  "name": "YouTube™ On Repeat",
+  "description": "Redirects you to the awesome YouTube™ on repeat service [me@nishantarora.in]",
+  "version": "0.6",
   "permissions": [
-    "*://www.youtube.com/*"
+    "*://www.youtube.com/*",
+    "*://www.youtubeonrepeat.com/*",
+    "*://youtubeonrepeat.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["*://www.youtube.com/*"],
-      "js": ["jquery.js", "repeat.js"]
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "js": [
+        "jquery.js",
+        "repeat.js"
+      ]
     },
     {
-      "matches": ["*://www.youtubeonrepeat.com/*"],
-      "js": ["installed.js"]
+      "matches": [
+        "*://www.youtubeonrepeat.com/*",
+        "*://youtubeonrepeat.com/*"
+      ],
+      "js": [
+        "installed.js"
+      ]
     }
   ],
   "icons": {
