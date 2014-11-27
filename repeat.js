@@ -57,9 +57,13 @@ function _load_icon() {
   if($('#youtube-repeat-icon').length == 0 &&
      window.location.href.indexOf('watch') != -1) {
     $('h1#watch-headline-title').before(
-        '<a href="http://youtubeonrepeat.com/watch?v=' + $.urlParam('v') +
-        '"><img id="youtube-repeat-icon" style="float:left; ' +
-        'padding-right:10px;" width="43" height="28" '+
+        '<a href="http://youtubeonrepeat.com/watch?v=' +
+        $.urlParam('v') +
+        '&utm_source=youtube' +
+        '&utm_medium=chrome_extension' +
+        '&utm_campaign=youtubeonrepeat">' +
+        '<img id="youtube-repeat-icon" style="float:left; ' +
+        'padding-right:10px;" width="48" height="32" '+
         'title="Repeat This Video" alt="Repeat This Video" src="' +
         youtubeOnRepeatIcon + '" /></a>');
   }
