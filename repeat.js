@@ -75,6 +75,6 @@ youTubeOnRepeatApp.loadIcon = function() {
 /**
  * Adding the button with link to the video title
  */
-$(document).ready(
+jQuery(document).ready(
   youTubeOnRepeatApp.loadIcon).bind(
   "DOMSubtreeModified", youTubeOnRepeatApp.loadIcon);
