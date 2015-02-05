@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "YouTube™ On Repeat",
   "description": "Redirects you to the awesome YouTube™ on repeat service [me@nishantarora.in]",
-  "version": "0.8",
+  "version": "0.9",
   "permissions": [
     "*://www.youtube.com/*",
     "*://www.youtubeonrepeat.com/*",

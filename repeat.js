@@ -5,20 +5,29 @@
 
 
 /**
+ * App Namespace.
+ * @type {{}}
+ */
+var youTubeOnRepeatApp = {};
+
+
+/**
  * Thanks to http://www.jquery4u.com/snippets/url-parameters-jquery/
  * should return the parameter value from the url for the given.
  */
-$.urlParam = function(name){
-    var results = new RegExp('[\\?&amp;]' + name +
-        '=([^&#$]*)').exec(window.location.href);
+youTubeOnRepeatApp.urlParam = function(name){
+    var results = new RegExp(
+                      '[\\?&amp;]' + name + '=([^&#$]*)').exec(
+                          window.location.href);
     return results[1] || 0;
-}
+};
 
 
 /**
  * Icon data uri
+ * @type {string}
  */
-youtubeOnRepeatIcon =
+youTubeOnRepeatApp.youtubeOnRepeatIcon =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAcCAYAAAD4IkbVAAAAAXNS' +
   'R0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9' +
   '4EEBIwBfH3k8IAAAQ6SURBVFjDxZhfiBVlGMZ/z3HVDRe1tpQEm+NduZRgECUInSGEspkIIunP' +
@@ -45,26 +54,27 @@ youtubeOnRepeatIcon =
 
 
 /**
- * Adding the button with link to the video title
- */
-$(document).ready(_load_icon).bind("DOMSubtreeModified",_load_icon);
-
-
-/**
  * Loading icon
  */
-function _load_icon() {
-  if($('#youtube-repeat-icon').length == 0 &&
+youTubeOnRepeatApp.loadIcon = function() {
+  if(jQuery('#youtube-repeat-icon').length == 0 &&
      window.location.href.indexOf('watch') != -1) {
-    $('h1#watch-headline-title').before(
-        '<a href="http://youtubeonrepeat.com/watch?v=' +
-        $.urlParam('v') +
-        '&utm_source=youtube' +
-        '&utm_medium=chrome_extension' +
-        '&utm_campaign=youtubeonrepeat">' +
-        '<img id="youtube-repeat-icon" style="float:left; ' +
-        'padding-right:10px;" width="48" height="32" '+
-        'title="Repeat This Video" alt="Repeat This Video" src="' +
-        youtubeOnRepeatIcon + '" /></a>');
+      jQuery( 'div#watch-headline-title' ).prepend (
+      '<a href="http://youtubeonrepeat.com/watch?v=' +
+      youTubeOnRepeatApp.urlParam ( 'v' ) +
+      '&utm_source=youtube' +
+      '&utm_medium=chrome_extension' +
+      '&utm_campaign=youtubeonrepeat">' +
+      '<img id="youtube-repeat-icon" style="float:left; ' +
+      'padding-right:10px;" width="48" height="32" ' +
+      'title="Repeat This Video" alt="Repeat This Video" src="' +
+      youTubeOnRepeatApp.youtubeOnRepeatIcon + '" /></a>' );
   }
 };
+
+/**
+ * Adding the button with link to the video title
+ */
+$(document).ready(
+  youTubeOnRepeatApp.loadIcon).bind(
+  "DOMSubtreeModified", youTubeOnRepeatApp.loadIcon);
