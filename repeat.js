@@ -28,29 +28,34 @@ youTubeOnRepeatApp.urlParam = function(name){
  * @type {string}
  */
 youTubeOnRepeatApp.youtubeOnRepeatIcon =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAcCAYAAAD4IkbVAAAAAXNS' +
-  'R0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9' +
-  '4EEBIwBfH3k8IAAAQ6SURBVFjDxZhfiBVlGMZ/z3HVDRe1tpQEm+NduZRgECUInSGEspkIIunP' +
-  'RVQQXUTWRX8MugkqguoqiYooQyK7iTlGhTmHLMwL7Q+FBCrNZFiaEpmpaevTxYzr2eOqM+tufV' +
-  'fncL755nnf93ne9/mOsjikmaQA5HF4iWEI00IsElwGDAIzgengaSAmYR0GjmB+R+wx/ABsEmwB' +
-  'dgdJOpxH4ak353H4FOYB8HxLkwOpwjKj0nEYSLAfCtqd/QLIo/Bx42dBDf1fKE+HbZBcfF4vdJ' +
-  'uyqDUoaRsQTEZyjBHqSdh4oHtJn2BhAfS8zzu5BKwGvgaWyLoVMXvsKtcK/v4G0vUYJlg4m4Mk' +
-  'fSNI0nuDdnohsALIegDUCR6JGxvAoklQ09/dX4IkXWf7CptnjE/Y9bNr61JlUWsrcLXqK8tdkf' +
-  'eW9ytgPWZN0E53dT+Ux+EjwEsGq3o5TaF+XVwHXFf99tp8BrzdA9TAYuBpi515HH6Rx+E1Zdch' +
-  'SNKXgVcFcnU6FFTIo9YBpIsqK9x+19I7mO3gn0EDErvK4TH6GRuEsI5aRM0k/RQgi1pTkL4VDN' +
-  'UpZQNpesXItgODQbtzZzNJP5LIm+3OMPgwsBH79GekMoH0YzbkUWsWQLPdGZZ53jV51wD6K1Jg' +
-  'oc0veRw+WDKe8sXHMRuRhs8YqLAwSK+UvAXYJvitFlhjVaBOKSJPs5lyWiTi4zLDPjNgAVybx+' +
-  'GsIEmxvMf2/jpg+zQi5ipUEBI/lhkli8MXBIuAJ0E7bBaP0VROAMPAVGAAmAP8ATokfKRmZut0' +
-  'ZwMcL8uIoN+wDPgSCE5O8h7+HAMes70OM6Or3zWo2S8bKutYDa0ABoLSUgK7yqJMLbqBxipHPz' +
-  'Cz2e6sQMwDdpecn1Vm2nU4Wwq28rqqK2vvqWD8uaK9IY/DC4Ik/bOZpEfzqIWkAWB61zTzubuB' +
-  'dbSmL7gdoDTtvwKvyeZMDd5FFpdizx4Zv+0OmAx8ucQqwz9VytuQRs/xczQwY67I49ZNzSQlj0' +
-  'MMK8sGP2aGZLugpu4pBwJ5HM5DLAU9Z/ywoK9KeZXF4U+C+TXt2n7bQ812Z18BIJwr8SJw11m8' +
-  '7V7sR5HuAIawF5QNptdnnFVgB+raNduDSGvzOJxR6m5vkKR3G5qG1YadNidG9hdg5hqtBW4Gmm' +
-  'iUjVEVj6osDj8Q3DLOq8CHwMogSXf27smicLPEdRN2+7DVwHw/jquAC5fCcvCWPG6tGmNTn+0J' +
-  'woosDiqPwmWITybgwGPAW8AGIDO8CVypichqUci28rg1x+g72XMY/9W2PLDbSRYjT+d/XzJFq4' +
-  'gaQdLZJ1jDqVk5ntqpV8ylfnR+PB05dKtgU6P84Qnj14EjY6hywohX+aJ0ylqC2YK5L0jSg8qi' +
-  'VuGgolDCCxDLQcso3NRc29P03/3zYZu/JHbY/lzifdA3QZIeyqKQfwG5J8SZyYP9NQAAAABJRU' +
-  '5ErkJggg==';
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFwklE' +
+  'QVRoge2aXYhVVRTHt/kBmqUVZkFBQRgxUNjVhtGZOWstP++9e20Q9VmQeurjpUCIHswgKAghKM' +
+  'kgIdJM6E3LEp2XGJWGNPGqeOeevXahMPbpDIozOnN6OPfeOXPvuV9Hx5nAA4s5zAzrnN/+r//a' +
+  '6+4ZJQa/sgYPi8ETjumiM3RJDA0I07CY6RQ44jT+LYYGHGNeDP0ijEeVMxQ4xsAZqgqJ+d5Uhh' +
+  'iM3Idf1VS/1O3GPYCpjnsANYNxLNocpHyPpZ+NTWsAMRhYgyOOaacwfuwY91vGk2JoOASiQPTt' +
+  'g0ymAoFjutbb0TFXKTUj19Y2J59uf7B/bfeTvoZXhVFChTCQ24CYRACKAsRevqHNVsNFxzgmhg' +
+  'KnoWWQKQVQSqnC6tQCq2G7Y7guhgLHrUFMogcocJqu9aVSs+sBlC6bwXYxNDCtFLCGhq2BLTaD' +
+  '7efWdT3ex6l5ddVgb7kw/ekMhgafFAANY46Lq8wYtscYE4bGjM4uMGgNHnZZ7/V8umtRLQjhrh' +
+  'ct07/jOe4EQKRviwlbpGg84jRsEoP/1Bz6oqvI5b1gVBgHrIEttZXAjdHBrXWAyOoVu8NNx/SX' +
+  '1XTSZmHb+VUvPVKuXcYvWiutIhRj4Bv8qAdgViXAAaVmWsZvxMSrWx9gwkrDZathv2S7txYynU' +
+  'viVsvPohGm0dY9gmPCGDiN78flzae7l4rB4UZlVAUgjIHV5PqztOIUwMJcW9ucesaz6+EpYfBb' +
+  '3VEl8lW0tyE2t6bvWi+hkgKMV/yst7mwOrWgHoBSSgnjQSnWeQIlAmG6Gtdufd35gjTIWdMDws' +
+  'V5xWCuwN7yegC+plfCF0kwEhT9JkxvxarA5FoHMFTeEYUp6F8Hz9QDOKDUTGG65ZrsHNWBgWU4' +
+  '0QOqytDC9LkYnNjRmgIohmUYVErNqEycA5i/Xan7yg/S+GU4PiQczJguSbb7uSoADa/VK6O6AG' +
+  'EZ4enKpH2p1Gwx9LVl2FnIwDKllJJ091KpcTgQ57HKezEw5Geou/JZTsOm0tSaCMBp/KEy6Zls' +
+  '50OO8Wz4wjhkGb8tZDqXCOPZJo08Wmq9wmXPDQt76WoFvA31FqYZBb6vTNq/dsWjwnROzPh2X7' +
+  'wfbNQ1hDEQQ4FvvDWi8UPH+IdjGLOMN/yMtyYOoKhWAoDQzD9WJr2wcuUDVuOp2LJoNNMXf9cy' +
+  '7lNKqQvc/bRkvbdF45FSOUYvn+FlV4ROaGI6V5lUKaUsY08is5bz4sgBpWaW8uUA5seNFVbjB8' +
+  'lLyFAgmm7EbTKi4Z2wJFr/FFUuuyxujVucCc9h6q018TZWoCR3BturpDXti5O8/PjiYGyDqAbA' +
+  'QyXvxEE0BCjO/PvikvvsfRKOyQlANI5ZRtdok+zt6JhbyMAyYTjuDAWiYcJJRkMPSPigEX9V++' +
+  'LK5DmA+cJ4ucrIzcdogXFjIxX6Uql5+XTXItG4u1TaTQOEgaNi4L245FYDOINDySAwEI27VcxO' +
+  '39vRMdcyesK4Qxh+EsZbiRQYr1n4PZ+GJ+IgJOuhYwiPRlqACPcMuB5tEv1pXOmY9kgWRRiGJv' +
+  'T/mBO9pgCkPNjh3loy5zLwmGP42Wq8UTKdmPGdtrbHKHCMb9gsbBPGK2WDmzv5mTjyMGHcUadc' +
+  'ZzgGbRn2iEEbtwhxeRN4JykABsJ4s8Deu3UgVA/ArNy6jof99fisrz22Bo7VzWuo5rh85wAm+I' +
+  'ECMfBmo1O30uUM7WpqUr0bANG6lCwcjNvkKi/L+NlkvHxiBULZsXj6BoNWwy4LsLCmAtMOIAJS' +
+  'NrfBwDLulyytyKe7Fv269vn7+1Kp2duVum/6KVAFAuXDquLpxCVhPGoZ9wrjp9bQmVrz/PQAiC' +
+  'oyfj/+ZyXGZPPSXQeYgrgHMNXx/wcoz9bhXxUDZ0pT4sR/rphOUWoOYihQjmGP1XjIMh4XxvPO' +
+  '4G9iaEA0XRODI1P/bzaRYLoaTqzYbxlPi6Fj/wFSuttApJJnVAAAAABJRU5ErkJggg==';
 
 
 /**
@@ -59,14 +64,14 @@ youTubeOnRepeatApp.youtubeOnRepeatIcon =
 youTubeOnRepeatApp.loadIcon = function() {
   if(jQuery('#youtube-repeat-icon').length == 0 &&
      window.location.href.indexOf('watch') != -1) {
-      jQuery( 'div#watch-headline-title' ).prepend (
+      jQuery( 'div#watch7-user-header' ).prepend (
       '<a href="http://youtubeonrepeat.com/watch?v=' +
       youTubeOnRepeatApp.urlParam ( 'v' ) +
       '&utm_source=youtube' +
       '&utm_medium=chrome_extension' +
       '&utm_campaign=youtubeonrepeat">' +
       '<img id="youtube-repeat-icon" style="float:left; ' +
-      'padding-right:10px;" width="48" height="32" ' +
+      'padding-right:10px;" width="48" height="48" ' +
       'title="Repeat This Video" alt="Repeat This Video" src="' +
       youTubeOnRepeatApp.youtubeOnRepeatIcon + '" /></a>' );
   }
